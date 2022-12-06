@@ -1,0 +1,70 @@
+﻿<Window x:Class="TabletopArmyCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TabletopArmyCreator"
+        xmlns:mahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:interfaces="clr-namespace:TabletopArmyCreator.Interfaces"
+        xmlns:viewModels="clr-namespace:TabletopArmyCreator.ViewModels"
+        xmlns:tabViewModels="clr-namespace:TabletopArmyCreator.ViewModels.TabViewModels"
+        xmlns:views="clr-namespace:TabletopArmyCreator.Views"
+        xmlns:enums="clr-namespace:TabletopArmyCreator.Enums"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance interfaces:IMainWindowViewModel, IsDesignTimeCreatable=False}">
+    <DockPanel LastChildFill="False">
+        <StackPanel DockPanel.Dock="Top">
+            <!--https://stackoverflow.com/questions/8258410/how-to-set-wrappanel-itemsource-to-list-->
+            <WrapPanel>
+                <WrapPanel.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Margin" Value="0,0, 2, 0"/>
+                       <Setter Property="Command" Value="{Binding MoveTabCommand}"/>
+                        <Setter Property="MinHeight" Value="10"/>
+                        <Setter Property="MinWidth" Value="35"/>
+                        <Setter Property="Margin" Value="1"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Grid>
+                                        <Border CornerRadius="3"
+                                                Height="{TemplateBinding Height}"
+                                                BorderBrush="LightGray"
+                                                BorderThickness="1">
+
+                                        </Border>
+                                        <ContentPresenter Margin="{TemplateBinding Margin}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+                                        </ContentPresenter>
+
+                                    
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </WrapPanel.Resources>
+                <Button Content="HQ"
+                        CommandParameter="{x:Static enums:UnitType.Hq }"/>
+
+                <Button Content="Troops"
+                        CommandParameter="{x:Static enums:UnitType.Troop}"/>
+            </WrapPanel>
+        </StackPanel>
+        <Grid>
+            <Grid.Resources>
+                <DataTemplate DataType="{x:Type tabViewModels:HqTabViewModel}">
+                    <views:HqTabView/>
+                </DataTemplate>
+                
+                <DataTemplate DataType="{x:Type tabViewModels:TroopTabViewModel}">
+                    <views:TroopTabView/>
+                </DataTemplate>
+            </Grid.Resources>
+
+            <ContentControl Content="{Binding SelectedTabView}"/>
+        </Grid>
+    </DockPanel>
+</Window>
