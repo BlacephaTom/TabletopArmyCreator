@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomgo\\VisualStudioProjects\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj": {}
+    "C:\\Users\\tomgo\\VisualStudioProjects\\GitHubRepos\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomgo\\VisualStudioProjects\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj": {
+    "C:\\Users\\tomgo\\VisualStudioProjects\\GitHubRepos\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomgo\\VisualStudioProjects\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj",
+        "projectUniqueName": "C:\\Users\\tomgo\\VisualStudioProjects\\GitHubRepos\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj",
         "projectName": "TabletopArmyCreator",
-        "projectPath": "C:\\Users\\tomgo\\VisualStudioProjects\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj",
+        "projectPath": "C:\\Users\\tomgo\\VisualStudioProjects\\GitHubRepos\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj",
         "packagesPath": "C:\\Users\\tomgo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomgo\\VisualStudioProjects\\TabletopArmyCreator\\TabletopArmyCreator\\obj\\",
+        "outputPath": "C:\\Users\\tomgo\\VisualStudioProjects\\GitHubRepos\\TabletopArmyCreator\\TabletopArmyCreator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

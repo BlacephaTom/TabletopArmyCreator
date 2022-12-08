@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H2jM8JSROq2aDkzSep0tZhHwpYXUHfcTK5MYdCIxxlOu8mFmlePd0kcbdrkYjOjkqVY/r/bxHtW9FSQIdfFKKg==",
+  "dgSpecHash": "HfRCu4N0HBPghusyDCqyyeJN1IGmkDtCQXTbSZ1eFe0ChcUAm8P7OO6mwlImr9f7LD73X5vhbTpFkQMGbZgOyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomgo\\VisualStudioProjects\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj",
+  "projectFilePath": "C:\\Users\\tomgo\\VisualStudioProjects\\GitHubRepos\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomgo\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\tomgo\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
