@@ -10,12 +10,12 @@
 
   <ItemGroup>
     <Folder Include="Commands\TabNavigationCommands\" />
-    <Folder Include="Dialogs\" />
     <Folder Include="ServiceExtensions\AbstractFactoryServiceExtensions\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
     <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="4.11.0" />
     <PackageReference Include="MahApps.Metro.SimpleChildWindow" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />

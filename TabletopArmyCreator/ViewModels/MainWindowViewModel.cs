@@ -102,10 +102,10 @@ namespace TabletopArmyCreator.ViewModels
             {
                 //Tab will always be null
                 case UnitType.Hq:
-                    this.SelectedTab = this.HqTabViewModel ?? App.AppHost.Services.GetRequiredService<IHqTabViewModel>();
+                    this.SelectedTab = this.HqTabViewModel ?? App.AppHost.Services.GetRequiredService<HqTabView>();
                     break;
                 case UnitType.Troop:
-                    this.SelectedTab = this.TroopTabViewModel ?? App.AppHost.Services.GetRequiredService<ITroopTabViewModel>();
+                    this.SelectedTab = this.TroopTabViewModel ?? App.AppHost.Services.GetRequiredService<TroopTabView>();
                     break;
             }
 

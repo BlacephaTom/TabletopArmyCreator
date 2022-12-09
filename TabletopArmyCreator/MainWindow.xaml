@@ -1,21 +1,25 @@
-﻿<Window x:Class="TabletopArmyCreator.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TabletopArmyCreator"
-        xmlns:mahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:interfaces="clr-namespace:TabletopArmyCreator.Interfaces"
-        xmlns:tabViewModels="clr-namespace:TabletopArmyCreator.ViewModels.TabViewModels"
-        xmlns:views="clr-namespace:TabletopArmyCreator.Views"
-        xmlns:enums="clr-namespace:TabletopArmyCreator.Enums"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        d:DataContext="{d:DesignInstance interfaces:IMainWindowViewModel, IsDesignTimeCreatable=False}">
+﻿<Controls:MetroWindow x:Class="TabletopArmyCreator.MainWindow"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:local="clr-namespace:TabletopArmyCreator"
+                    xmlns:mahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                    xmlns:fontAwesome="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                    xmlns:commands="clr-namespace:TabletopArmyCreator.Commands.DialogCommands"
+                    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                    xmlns:interfaces="clr-namespace:TabletopArmyCreator.Interfaces"
+                    xmlns:tabViewModels="clr-namespace:TabletopArmyCreator.ViewModels.TabViewModels"
+                    xmlns:views="clr-namespace:TabletopArmyCreator.Views"
+                    xmlns:enums="clr-namespace:TabletopArmyCreator.Enums"
+                    mc:Ignorable="d"
+                    Title="MainWindow" Height="450" Width="800"
+                    d:DataContext="{d:DesignInstance interfaces:IMainWindowViewModel, IsDesignTimeCreatable=False}">
     <DockPanel LastChildFill="False">
-        <StackPanel DockPanel.Dock="Top">
+        <DockPanel DockPanel.Dock="Top"
+                   LastChildFill="False">
             <!--https://stackoverflow.com/questions/8258410/how-to-set-wrappanel-itemsource-to-list-->
-            <WrapPanel>
+            <WrapPanel DockPanel.Dock="Left">
                 <WrapPanel.Resources>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Margin" Value="0,0, 2, 0"/>
@@ -52,7 +56,18 @@
                 <Button Content="Troops"
                         CommandParameter="{x:Static enums:UnitType.Troop}"/>
             </WrapPanel>
-        </StackPanel>
+            <Button DockPanel.Dock="Right">
+                <Button.Command>
+                    <commands:OpenUserSettingsDialog />
+                </Button.Command>
+                <Grid Height="15">
+                    <fontAwesome:PackIconFontAwesome  Kind="CogSolid"
+                                                      Spin="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}, Path=IsMouseOver}"/>
+                    <Image Source="Icons/Mozrog.JPG"
+                           Margin="8,0,0,0"/>
+                </Grid>
+            </Button>
+        </DockPanel>
 
         <Grid Height="350" Width="350" DockPanel.Dock="Left">
             <Grid.Resources>
@@ -62,13 +77,12 @@
                 <DataTemplate DataType="{x:Type tabViewModels:TroopTabViewModel}">
                     <views:TroopTabView/>
                 </DataTemplate>
-                
+
             </Grid.Resources>
-            
+
             <ContentControl Content="{Binding SelectedTab}"/>
 
         </Grid>
 
-
     </DockPanel>
-</Window>
+</Controls:MetroWindow>

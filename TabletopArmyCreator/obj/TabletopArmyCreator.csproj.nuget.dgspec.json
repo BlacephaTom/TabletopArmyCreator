@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.4.9, )"
             },
+            "MahApps.Metro.IconPacks": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
             "MahApps.Metro.IconPacks.FontAwesome": {
               "target": "Package",
               "version": "[4.11.0, )"

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TabletopArmyCreator.Interfaces.TabInterfaces;
 
 namespace TabletopArmyCreator.Views
 {
@@ -18,9 +19,10 @@ namespace TabletopArmyCreator.Views
     /// </summary>
     public partial class TroopTabView : UserControl
     {
-        public TroopTabView()
+        public TroopTabView(ITroopTabViewModel dataContext)
         {
             InitializeComponent();
+            this.DataContext = dataContext;
         }
     }
 }

@@ -37,9 +37,12 @@ namespace TabletopArmyCreator
                 {
                     services.AddSingleton<MainWindow>();
                     services.AddScoped<IMainWindowViewModel, MainWindowViewModel>();
-                    
+
+                    services.AddScoped<HqTabView>();
                     services.AddScoped<IHqTabViewModel, HqTabViewModel>();
+
                     services.AddScoped<ITroopTabViewModel, TroopTabViewModel>();
+                    services.AddScoped<TroopTabView>();
                 })
                 .Build();
         }

@@ -12,7 +12,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TabletopArmyCreator.Interfaces.TabInterfaces;
 
-
 namespace TabletopArmyCreator.Views
 {
     /// <summary>
@@ -20,10 +19,10 @@ namespace TabletopArmyCreator.Views
     /// </summary>
     public partial class HqTabView : UserControl
     {
-        public HqTabView()
+        public HqTabView(IHqTabViewModel dataContext)
         {
             InitializeComponent();
+            this.DataContext = dataContext;
         }
-
     }
 }
