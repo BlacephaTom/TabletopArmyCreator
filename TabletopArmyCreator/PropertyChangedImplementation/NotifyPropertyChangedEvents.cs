@@ -9,8 +9,7 @@ namespace TabletopArmyCreator.PropertyChangedImplementation
 
         public void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(propertyName, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
 }

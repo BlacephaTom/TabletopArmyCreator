@@ -15,6 +15,7 @@ using TabletopArmyCreator.ServiceExtensions;
 using TabletopArmyCreator.ViewModels.TabViewModels;
 using TabletopArmyCreator.ViewModels;
 using TabletopArmyCreator.Views;
+using System;
 
 //Transient objects are always different; a new instance is provided to every controller and every service.
 
@@ -36,16 +37,11 @@ namespace TabletopArmyCreator
                 {
                     services.AddSingleton<MainWindow>();
                     services.AddScoped<IMainWindowViewModel, MainWindowViewModel>();
-                    services.AddViewModelFactory<HqTabViewModel>();
-                    services.AddViewModelFactory<TroopTabViewModel>();
-                        
+                    
+                    services.AddScoped<IHqTabViewModel, HqTabViewModel>();
+                    services.AddScoped<ITroopTabViewModel, TroopTabViewModel>();
                 })
                 .Build();
-
-            // resolve the Interface to the ViewModel
-            //services.AddScoped<IHqTabViewModel, HqTabViewModel>();
-
-
         }
 
         /// <summary>

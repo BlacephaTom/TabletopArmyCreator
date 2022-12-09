@@ -12,17 +12,18 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TabletopArmyCreator.Interfaces.TabInterfaces;
 
+
 namespace TabletopArmyCreator.Views
 {
     /// <summary>
     /// Interaction logic for HqTabView.xaml
     /// </summary>
-    public partial class HqTabView : UserControl, IHqTabViewModel
+    public partial class HqTabView : UserControl
     {
-        public HqTabView(IHqTabViewModel dataContext)
+        public HqTabView()
         {
             InitializeComponent();
-            this.DataContext = dataContext;
         }
+
     }
 }

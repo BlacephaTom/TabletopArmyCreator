@@ -6,5 +6,11 @@ namespace TabletopArmyCreator.BaseClasses
 {
     public class ViewModelBase
     {
+        public ViewModelBase()
+        {
+
+        }
+
+
     }
 }

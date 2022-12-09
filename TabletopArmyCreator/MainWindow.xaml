@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:TabletopArmyCreator"
         xmlns:mahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:interfaces="clr-namespace:TabletopArmyCreator.Interfaces"
-        xmlns:viewModels="clr-namespace:TabletopArmyCreator.ViewModels"
         xmlns:tabViewModels="clr-namespace:TabletopArmyCreator.ViewModels.TabViewModels"
         xmlns:views="clr-namespace:TabletopArmyCreator.Views"
         xmlns:enums="clr-namespace:TabletopArmyCreator.Enums"
@@ -20,9 +19,10 @@
                 <WrapPanel.Resources>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Margin" Value="0,0, 2, 0"/>
-                       <Setter Property="Command" Value="{Binding MoveTabCommand}"/>
+                        <Setter Property="Command" Value="{Binding MoveTabCommand}"/>
                         <Setter Property="MinHeight" Value="10"/>
                         <Setter Property="MinWidth" Value="35"/>
+
                         <Setter Property="Margin" Value="1"/>
                         <Setter Property="Cursor" Value="Hand"/>
                         <Setter Property="Template">
@@ -39,7 +39,7 @@
 
                                         </ContentPresenter>
 
-                                    
+
                                     </Grid>
                                 </ControlTemplate>
                             </Setter.Value>
@@ -53,18 +53,22 @@
                         CommandParameter="{x:Static enums:UnitType.Troop}"/>
             </WrapPanel>
         </StackPanel>
-        <Grid>
+
+        <Grid Height="350" Width="350" DockPanel.Dock="Left">
             <Grid.Resources>
                 <DataTemplate DataType="{x:Type tabViewModels:HqTabViewModel}">
                     <views:HqTabView/>
                 </DataTemplate>
-                
                 <DataTemplate DataType="{x:Type tabViewModels:TroopTabViewModel}">
                     <views:TroopTabView/>
                 </DataTemplate>
+                
             </Grid.Resources>
+            
+            <ContentControl Content="{Binding SelectedTab}"/>
 
-            <ContentControl Content="{Binding SelectedTabView}"/>
         </Grid>
+
+
     </DockPanel>
 </Window>

@@ -11,7 +11,7 @@ namespace TabletopArmyCreator.Interfaces
 
         ICommand MoveTabCommand { get; set; }
 
-        object SelectedTabView { get; set; }
+        object SelectedTab { get; set; }
 
     }
 }

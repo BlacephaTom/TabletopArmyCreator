@@ -12,5 +12,6 @@ namespace TabletopArmyCreator.ViewModels.TabViewModels
         {
 
         }
+
     }
 }

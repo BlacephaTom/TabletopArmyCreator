@@ -53,7 +53,7 @@ namespace TabletopArmyCreator.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TabletopArmyCreator;V1.0.0.0;component/views/trooptabview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TabletopArmyCreator;component/views/trooptabview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\TroopTabView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

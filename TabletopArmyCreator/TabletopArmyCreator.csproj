@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Commands\TabNavigationCommands\" />
     <Folder Include="Dialogs\" />
-    <Folder Include="Commands\" />
     <Folder Include="ServiceExtensions\AbstractFactoryServiceExtensions\" />
   </ItemGroup>
 

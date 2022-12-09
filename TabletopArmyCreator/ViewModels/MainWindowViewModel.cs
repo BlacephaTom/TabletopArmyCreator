@@ -20,31 +20,75 @@ namespace TabletopArmyCreator.ViewModels
 {
     public class MainWindowViewModel : MainWindowViewModelBaseClass, IMainWindowViewModel
     {
-        public MainWindowViewModel(IAbstractFactory<HqTabViewModel> test)
+        public MainWindowViewModel()
         {
             this.MoveTabCommand = new DelegateCommand<object>(this.MoveTab);
-            this.TabViewModelFactory = test;
-            
         }
-        
-
-        private IAbstractFactory<HqTabViewModel> TabViewModelFactory { get; set; }
-
+    
         /// <summary>
         /// Switch tab
         /// </summary>
         public ICommand MoveTabCommand { get; set; }
 
-
-        private object _selectedTabView { get; set; }
-        public object SelectedTabView
+        /// <summary>
+        /// 
+        /// </summary>
+        public object _selectedTab { get; set; }
+        public object SelectedTab
         {
-            get { return _selectedTabView; }
+            get
+            {
+
+                return this._selectedTab;
+
+            }
             set
             {
-                if(_selectedTabView != value)
+                if (_selectedTab != value)
                 {
-                    this._selectedTabView = value;
+                    this._selectedTab = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private object _hqTabViewModel { get; set; }
+        public object HqTabViewModel
+        {
+            get 
+            { 
+               
+                    return this._hqTabViewModel;
+               
+            }
+            set
+            {
+                if(_hqTabViewModel != value)
+                {
+                    this._hqTabViewModel = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private object _troopTabViewModel { get; set; }
+        public object TroopTabViewModel
+        {
+            get
+            {
+                return this._troopTabViewModel;
+            }
+            set
+            {
+                if(this._troopTabViewModel != value)
+                {
+                    this._troopTabViewModel = value;
                     NotifyPropertyChanged();
                 }
             }
@@ -56,12 +100,12 @@ namespace TabletopArmyCreator.ViewModels
 
             switch ((UnitType)tab)
             {
+                //Tab will always be null
                 case UnitType.Hq:
-                    //this.SelectedTabView = TabViewModelFactory.Create();
-                    this.SelectedTabView = App.AppHost.Services.GetRequiredService<HqTabViewModel>();
+                    this.SelectedTab = this.HqTabViewModel ?? App.AppHost.Services.GetRequiredService<IHqTabViewModel>();
                     break;
                 case UnitType.Troop:
-                    this.SelectedTabView = App.AppHost.Services.GetRequiredService<TroopTabViewModel>();
+                    this.SelectedTab = this.TroopTabViewModel ?? App.AppHost.Services.GetRequiredService<ITroopTabViewModel>();
                     break;
             }
 
