@@ -4,10 +4,15 @@ using System.Text;
 
 using TabletopArmyCreator.Interfaces;
 
+using System.Windows.Controls;
+
+using System.Windows.Input;
+
 namespace TabletopArmyCreator.BaseClasses
 {
-    public class DialogWindowBase : IDialogWindowBase
+    public class DialogWindowBase : UserControl, IDialogWindowBase
     {
+
 
 
         public string ConfirmationString { get; set; }
@@ -16,10 +21,11 @@ namespace TabletopArmyCreator.BaseClasses
 
         public bool ShowConfirmationOnly { get; set; }
 
+        public string DialogWindowTitle { get; set; }
 
 
+        public ICommand ConfirmationCommand { get; set; }
 
-
-
+        public ICommand CancelCommand { get; set; }
     }
 }

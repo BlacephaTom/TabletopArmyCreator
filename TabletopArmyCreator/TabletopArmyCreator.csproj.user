@@ -7,7 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Dialogs\DialogViewShell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Dialogs\UserSettingsDialogView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\UserSettingsDialogView2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\HqTabView.xaml.cs">
@@ -27,7 +33,13 @@
     <Page Update="Resources\ButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Dialogs\DialogViewShell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Dialogs\UserSettingsDialogView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialogs\UserSettingsDialogView2.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\HqTabView.xaml">

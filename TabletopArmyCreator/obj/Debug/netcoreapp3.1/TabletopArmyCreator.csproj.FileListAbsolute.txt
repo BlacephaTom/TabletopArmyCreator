@@ -187,3 +187,7 @@ C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmy
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\MahApps.Metro.IconPacks.dll
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView.g.cs
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView.baml
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\DialogViewShell.g.cs
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView2.g.cs
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\DialogViewShell.baml
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView2.baml

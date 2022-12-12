@@ -4,6 +4,9 @@ using TabletopArmyCreator.Interfaces.FactoryInterfaces;
 using TabletopArmyCreator.Factories;
 using TabletopArmyCreator.Interfaces;
 
+
+using Prism.Commands;
+
 namespace TabletopArmyCreator.ServiceExtensions
 {
     
@@ -22,6 +25,24 @@ namespace TabletopArmyCreator.ServiceExtensions
             services.AddTransient<TViewModel>();
             services.AddSingleton<Func<TViewModel>>(x => () => x.GetService<TViewModel>());
             services.AddSingleton<IAbstractFactory<TViewModel>, AbstractFactory<TViewModel>>();
+        }
+
+        public static void AddDialog<TDialogWindow>(this IServiceCollection services, Action confirmationAction) where TDialogWindow : BaseClasses.DialogWindowBase, IDialogWindowBase
+        {
+            services.AddTransient<TDialogWindow>();
+
+
+            services.AddSingleton<Func<TDialogWindow>>(x => () =>
+
+            {
+                var dialogWindow = x.GetService<TDialogWindow>();
+                dialogWindow.ConfirmationCommand = new DelegateCommand(confirmationAction);
+
+                return dialogWindow;
+            });
+
+
+            services.AddSingleton<IAbstractFactory<TDialogWindow>, AbstractFactory<TDialogWindow>>();
         }
     }
 }

@@ -15,7 +15,16 @@ using TabletopArmyCreator.ServiceExtensions;
 using TabletopArmyCreator.ViewModels.TabViewModels;
 using TabletopArmyCreator.ViewModels;
 using TabletopArmyCreator.Views;
+
+using TabletopArmyCreator.Views.Dialogs;
+using TabletopArmyCreator.Interfaces.Dialogs;
+
 using System;
+using TabletopArmyCreator.Enums;
+
+using TabletopArmyCreator.ViewModels.Dialogs;
+
+
 
 //Transient objects are always different; a new instance is provided to every controller and every service.
 
@@ -43,6 +52,20 @@ namespace TabletopArmyCreator
 
                     services.AddScoped<ITroopTabViewModel, TroopTabViewModel>();
                     services.AddScoped<TroopTabView>();
+
+                    services.AddScoped<UserSettingsDialogView2>();
+                    //services.AddScoped<IUserSettingsDialogView2, UserSettingsDialogView2>();
+
+                    services.AddScoped<MahApps.Metro.SimpleChildWindow.ChildWindow>();
+                    services.AddScoped<UserSettingsDialogViewModel>();
+                    services.AddScoped<DialogViewShell>();
+
+
+                    //services.AddDialog<UserSettingsDialogViewModel>();
+                    
+
+                    services.AddScoped<UserSettingsDialogView2>();
+
                 })
                 .Build();
         }

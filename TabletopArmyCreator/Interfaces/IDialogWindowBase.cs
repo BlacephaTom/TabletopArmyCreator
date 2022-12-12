@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Windows.Input;
+
+
 namespace TabletopArmyCreator.Interfaces
 {
     public interface IDialogWindowBase
@@ -12,8 +15,11 @@ namespace TabletopArmyCreator.Interfaces
 
         bool ShowConfirmationOnly { get; set; }
 
+        string DialogWindowTitle { get; set; }
 
+        ICommand ConfirmationCommand { get; set; }
 
+        ICommand CancelCommand { get; set; }
 
     }
 }
