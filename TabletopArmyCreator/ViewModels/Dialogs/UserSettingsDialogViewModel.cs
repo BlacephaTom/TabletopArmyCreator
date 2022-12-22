@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using TabletopArmyCreator.BaseClasses;
+using System;
 
-using TabletopArmyCreator.BaseClasses;
-
+using Prism.Commands;
 
 namespace TabletopArmyCreator.ViewModels.Dialogs
 {
@@ -11,7 +9,21 @@ namespace TabletopArmyCreator.ViewModels.Dialogs
    {
         public UserSettingsDialogViewModel()
         {
+            this.CancelCommand = new DelegateCommand(this.CancelImplementation);
+            this.ConfirmationCommand = new DelegateCommand(this.ConfirmationImplementation);
+        }
+
+        public void CancelImplementation()
+        {
 
         }
-   }
+
+        public void ConfirmationImplementation()
+        {
+
+        }
+
+        public string Username { get; set; }
+
+    }
 }

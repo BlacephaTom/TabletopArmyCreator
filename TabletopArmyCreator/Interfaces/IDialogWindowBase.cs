@@ -17,6 +17,7 @@ namespace TabletopArmyCreator.Interfaces
 
         string DialogWindowTitle { get; set; }
 
+
         ICommand ConfirmationCommand { get; set; }
 
         ICommand CancelCommand { get; set; }

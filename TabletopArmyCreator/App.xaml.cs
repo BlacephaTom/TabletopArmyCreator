@@ -54,18 +54,15 @@ namespace TabletopArmyCreator
                     services.AddScoped<TroopTabView>();
 
                     services.AddScoped<UserSettingsDialogView2>();
-                    //services.AddScoped<IUserSettingsDialogView2, UserSettingsDialogView2>();
-
+                    
                     services.AddScoped<MahApps.Metro.SimpleChildWindow.ChildWindow>();
-                    services.AddScoped<UserSettingsDialogViewModel>();
                     services.AddScoped<DialogViewShell>();
 
-
-                    //services.AddDialog<UserSettingsDialogViewModel>();
-                    
-
+                    services.AddScoped<UserSettingsDialogViewModel>();
                     services.AddScoped<UserSettingsDialogView2>();
 
+                    services.AddScoped<MessageDialogViewModel>();
+                    services.AddScoped<MessageDialogView>();
                 })
                 .Build();
         }

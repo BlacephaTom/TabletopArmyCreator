@@ -14,9 +14,11 @@
                      d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
         <DockPanel DockPanel.Dock="Bottom">
-            <Button Content="{Binding ConfirmationString}"
+            <Button x:Name="ConfirmButton"
+                    Content="{Binding ConfirmationString}"
                     Command="{Binding ConfirmationCommand}"/>
-            <Button Content="{Binding CancelationString}"
+            <Button x:Name="CancelButton"
+                    Content="{Binding CancelationString}"
                     Command="{Binding CancelCommand}">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">

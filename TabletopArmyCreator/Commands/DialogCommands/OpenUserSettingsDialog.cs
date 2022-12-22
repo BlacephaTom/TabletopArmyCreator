@@ -13,31 +13,21 @@ namespace TabletopArmyCreator.Commands.DialogCommands
 {
     public class OpenUserSettingsDialog : BaseDialogNavigation
     {
-        public override void Execute(object param)
+        public override async void Execute(object param)
         {
-
-
             //Need to open the dialog from somewhere
             //this.OpenDialog(new Views.Dialogs.UserSettingsDialogView());
 
             var dialogView = App.AppHost.Services.GetRequiredService<UserSettingsDialogViewModel>();
             dialogView.DialogWindowTitle = "this is test";
-            
 
-
-
-            this.OpenDialog(dialogView,
-                            ConfirmationCommand: () => { },
-                            CancellationCommand: () => { this.TheCancelationCommand() ; }
-                            );
-
-            
-
+            await this.OpenConfirmCancelDialogAsync(dialogView);
+    
         }
 
-        public void TheCancelationCommand()
+        public void SaveUserSettings(UserSettingsDialogViewModel userSettings)
         {
-            
+
         }
     }
 }

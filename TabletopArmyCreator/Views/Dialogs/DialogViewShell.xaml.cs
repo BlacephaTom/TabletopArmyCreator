@@ -25,5 +25,12 @@ namespace TabletopArmyCreator.Views.Dialogs
         {
             InitializeComponent();
         }
+
+        public override void EndInit()
+        {
+            base.EndInit();
+            this.ConfirmButton.Click += (sender, e) => { this.IsOpen = false; };
+            this.CancelButton.Click += (sender, e) => { this.IsOpen = false; };
+        }
     }
 }

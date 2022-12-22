@@ -12,9 +12,6 @@ namespace TabletopArmyCreator.BaseClasses
 {
     public class DialogWindowBase : UserControl, IDialogWindowBase
     {
-
-
-
         public string ConfirmationString { get; set; }
 
         public string CancelationString { get; set; }
@@ -22,8 +19,7 @@ namespace TabletopArmyCreator.BaseClasses
         public bool ShowConfirmationOnly { get; set; }
 
         public string DialogWindowTitle { get; set; }
-
-
+       
         public ICommand ConfirmationCommand { get; set; }
 
         public ICommand CancelCommand { get; set; }
