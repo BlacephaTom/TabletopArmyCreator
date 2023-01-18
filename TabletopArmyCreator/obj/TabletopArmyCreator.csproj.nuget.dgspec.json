@@ -75,6 +75,10 @@
             "Prism.Wpf": {
               "target": "Package",
               "version": "[8.1.97, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [

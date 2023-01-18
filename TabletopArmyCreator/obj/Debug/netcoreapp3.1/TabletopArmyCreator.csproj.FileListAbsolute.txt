@@ -131,7 +131,6 @@ C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmy
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\TabletopArmyCreator.csproj.AssemblyReference.cache
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Resources\ButtonStyles.baml
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\App.g.cs
@@ -185,11 +184,16 @@ C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmy
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\MahApps.Metro.IconPacks.WeatherIcons.dll
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\MahApps.Metro.IconPacks.Zondicons.dll
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\MahApps.Metro.IconPacks.dll
-C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView.g.cs
-C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView.baml
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\DialogViewShell.g.cs
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView2.g.cs
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\DialogViewShell.baml
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\UserSettingsDialogView2.baml
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\MessageDialogView.g.cs
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\Views\Dialogs\MessageDialogView.baml
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\obj\Debug\netcoreapp3.1\TabletopArmyCreator.csproj.AssemblyReference.cache
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

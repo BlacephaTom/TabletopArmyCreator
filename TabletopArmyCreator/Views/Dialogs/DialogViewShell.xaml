@@ -8,23 +8,29 @@
                      ShowCloseButton="True"
                      MinHeight="200"
                      MinWidth="200"
-                     mc:Ignorable="d" 
-                     Title="{Binding DialogWindowTitle}"
-                     CloseButtonCommand="{Binding CancelCommand}"
+                     mc:Ignorable="d"
+                     CloseButtonCommand="{Binding ElementName=viewPresenter, Path=Content.DataContext.CancelCommand}"
                      d:DesignHeight="450" d:DesignWidth="800">
-    <DockPanel>
-        <DockPanel DockPanel.Dock="Bottom">
+    <DockPanel LastChildFill="False">
+        <ContentPresenter DockPanel.Dock="Top"
+                            x:Name="viewPresenter">
+        </ContentPresenter>
+
+        <DockPanel DockPanel.Dock="Bottom"
+                   HorizontalAlignment="Right">
             <Button x:Name="ConfirmButton"
-                    Content="{Binding ConfirmationString}"
-                    Command="{Binding ConfirmationCommand}"/>
+                    Command="{Binding ElementName=viewPresenter, Path=Content.DataContext.ConfirmationCommand}"
+                    Content="Save"
+                    Cursor="Hand"/>
             <Button x:Name="CancelButton"
-                    Content="{Binding CancelationString}"
-                    Command="{Binding CancelCommand}">
+                    Command="{Binding ElementName=viewPresenter, Path=Content.DataContext.CancelCommand}"
+                    Content="Cancel"
+                    Cursor="Hand">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Visibility" Value="Visible"/>
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding ShowConfirmationOnly}" Value="True">
+                            <DataTrigger Binding="{Binding ElementName=viewPresenter, Path=Content.DataContext.ShowConfirmationOnly}" Value="True">
                                 <Setter Property="Visibility" Value="Collapsed"/>
                             </DataTrigger>
                         </Style.Triggers>

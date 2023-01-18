@@ -1,33 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 using System.Windows.Input;
 
 using Microsoft.Extensions.DependencyInjection;
-using TabletopArmyCreator.ViewModels.Dialogs;
 
+using TabletopArmyCreator.Interfaces.Dialogs;
 using TabletopArmyCreator.DialogNavigation;
+using TabletopArmyCreator.Views.Dialogs;
+using TabletopArmyCreator.Payloads;
 
 namespace TabletopArmyCreator.Commands.DialogCommands
 {
-    public class OpenUserSettingsDialog : BaseDialogNavigation
+    public class OpenUserSettingsDialog : DialogService, ICommand
     {
-        public override async void Execute(object param)
+        public event EventHandler CanExecuteChanged;
+
+        public bool CanExecute(object parameter)
         {
-            //Need to open the dialog from somewhere
-            //this.OpenDialog(new Views.Dialogs.UserSettingsDialogView());
-
-            var dialogView = App.AppHost.Services.GetRequiredService<UserSettingsDialogViewModel>();
-            dialogView.DialogWindowTitle = "this is test";
-
-            await this.OpenConfirmCancelDialogAsync(dialogView);
-    
+            return true;
         }
 
-        public void SaveUserSettings(UserSettingsDialogViewModel userSettings)
+        public async void Execute(object param)
         {
+            var dialogView = App.AppHost.Services.GetDialogViewWithDataContext<UserSettingsDialogView2, IUserSettingsDialogViewModel>(new UserSettingsDialogParameters(7));
 
+            await this.OpenConfirmCancelDialogAsync(dialogView, "User Settings");
         }
     }
 }

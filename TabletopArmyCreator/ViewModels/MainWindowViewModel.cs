@@ -15,6 +15,7 @@ using TabletopArmyCreator.Interfaces.TabInterfaces;
 using TabletopArmyCreator.ViewModels.TabViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using TabletopArmyCreator.Factories;
+using TabletopArmyCreator.ViewModels.Dialogs;
 
 namespace TabletopArmyCreator.ViewModels
 {
@@ -23,8 +24,11 @@ namespace TabletopArmyCreator.ViewModels
         public MainWindowViewModel()
         {
             this.MoveTabCommand = new DelegateCommand<object>(this.MoveTab);
+            this.UserId = 5;
         }
     
+        public int UserId { get; set; }
+
         /// <summary>
         /// Switch tab
         /// </summary>
@@ -110,6 +114,5 @@ namespace TabletopArmyCreator.ViewModels
             }
 
         }
-
     }
 }

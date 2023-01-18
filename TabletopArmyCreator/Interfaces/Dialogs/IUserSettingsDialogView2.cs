@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TabletopArmyCreator.Interfaces.Dialogs
+﻿namespace TabletopArmyCreator.Interfaces.Dialogs
 {
-    public interface IUserSettingsDialogView2 : IDialogWindowBase
+    public interface IUserSettingsDialogViewModel : IDialogWindowBase
     {
+        long UserId { get; set; }
 
-
+        string Username { get; set; }
     }
 }

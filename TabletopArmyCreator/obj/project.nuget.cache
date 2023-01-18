@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KadvvA2KMguTb6UXXtZeBeMZnXrHfuC0wBmS1Mxy/KnB/WlMgB70FkxgF6QX7vWROE2Cr+7O9xb/toRXwdpWpg==",
+  "dgSpecHash": "3vzzzFSylUt7xhIHJ5BW+4dl8XKiqL0wkIkKW3M0D5Ukq/TXkvRSO0AxOAzBWSumuvU09g5wadc6GW07Ekm7KA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tomgo\\VisualStudioProjects\\GitHubRepos\\TabletopArmyCreator\\TabletopArmyCreator\\TabletopArmyCreator.csproj",
   "expectedPackageFiles": [
@@ -39,7 +39,12 @@
     "C:\\Users\\tomgo\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
     "C:\\Users\\tomgo\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
     "C:\\Users\\tomgo\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512",
+    "C:\\Users\\tomgo\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\tomgo\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\tomgo\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\tomgo\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\tomgo\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\tomgo\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\tomgo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\tomgo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\tomgo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

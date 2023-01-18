@@ -1,11 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+
 using System;
+
 using TabletopArmyCreator.Interfaces.FactoryInterfaces;
 using TabletopArmyCreator.Factories;
-using TabletopArmyCreator.Interfaces;
-
-
-using Prism.Commands;
 
 namespace TabletopArmyCreator.ServiceExtensions
 {
@@ -27,22 +25,52 @@ namespace TabletopArmyCreator.ServiceExtensions
             services.AddSingleton<IAbstractFactory<TViewModel>, AbstractFactory<TViewModel>>();
         }
 
-        public static void AddDialog<TDialogWindow>(this IServiceCollection services, Action confirmationAction) where TDialogWindow : BaseClasses.DialogWindowBase, IDialogWindowBase
-        {
-            services.AddTransient<TDialogWindow>();
+        //public static void AddDialog<TName, TDialogWindow, IDialogViewModel>(this IServiceCollection services) where TDialogWindow : System.Windows.Controls.UserControl
+        //    where IDialogViewModel : IDialogWindowBase
+            
+        //{
+        //    //services.AddTransient<TName>();
+
+        //    //services.AddSingleton<Func<TDialogWindow>>(x => () =>
+        //    //{
+        //    //    var dialogWindow = x.GetService<TDialogWindow>();
+        //    //    return dialogWindow;
+        //    //});
+        //}
+
+        //    services.AddSingleton<IAbstractFactory<TDialogWindow>, AbstractFactory<TDialogWindow>>();
+        //}
+
+        ////https://stackoverflow.com/questions/25366291/how-to-handle-dependency-injection-in-a-wpf-mvvm-application
+
+        //public static void AddDialog2<TDialogWindow>(this IServiceCollection services, IDialogWindowBase IDialogViewModel) where TDialogWindow : System.Windows.Controls.UserControl
+        //    //where IDialogViewModel : IDialogWindowBase
+        //{
+        //    services.AddTransient<TDialogWindow>();
+
+        //    services.AddSingleton<Func<IDialogWindowBase, TDialogWindow>>(x => (IDialogWindowBase) =>
+        //    {
+        //        var dialogWindow = x.GetService<TDialogWindow>();
+        //        return dialogWindow;
+        //    });
 
 
-            services.AddSingleton<Func<TDialogWindow>>(x => () =>
+        //    services.AddSingleton<IAbstractFactory<TDialogWindow>, AbstractFactory<TDialogWindow>>();
+        //}
 
-            {
-                var dialogWindow = x.GetService<TDialogWindow>();
-                dialogWindow.ConfirmationCommand = new DelegateCommand(confirmationAction);
+        //public static void AddDialog3<IDialogViewModel, TDialogWindow>(this IServiceCollection services) where TDialogWindow : System.Windows.Controls.UserControl
+        //            where IDialogViewModel : class
+        //{
+        //    services.AddTransient<IDialogViewModel>();
 
-                return dialogWindow;
-            });
+        //    services.AddSingleton<Func<TDialogWindow>>(x => () =>
+        //    {
+        //        var dialogWindow = x.GetService<TDialogWindow>();
+        //        return dialogWindow;
+        //    });
 
 
-            services.AddSingleton<IAbstractFactory<TDialogWindow>, AbstractFactory<TDialogWindow>>();
+        //    services.AddSingleton<IAbstractFactory<IDialogViewModel>, AbstractFactory<IDialogViewModel>>();
+        //}
         }
-    }
 }

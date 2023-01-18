@@ -6,5 +6,8 @@ namespace TabletopArmyCreator.Interfaces
 {
     public interface IBaseViewModel
     {
+
+
+
     }
 }

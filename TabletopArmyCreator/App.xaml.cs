@@ -1,30 +1,16 @@
-﻿
-using System.Windows;
+﻿using System.Windows;
 
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-using TabletopArmyCreator;
-
-using TabletopArmyCreator.Interfaces.FactoryInterfaces;
-using TabletopArmyCreator.Factories;
-
 using TabletopArmyCreator.Interfaces.TabInterfaces;
 using TabletopArmyCreator.Interfaces;
-using TabletopArmyCreator.ServiceExtensions;
 using TabletopArmyCreator.ViewModels.TabViewModels;
 using TabletopArmyCreator.ViewModels;
 using TabletopArmyCreator.Views;
-
 using TabletopArmyCreator.Views.Dialogs;
 using TabletopArmyCreator.Interfaces.Dialogs;
-
-using System;
-using TabletopArmyCreator.Enums;
-
 using TabletopArmyCreator.ViewModels.Dialogs;
-
-
 
 //Transient objects are always different; a new instance is provided to every controller and every service.
 
@@ -53,16 +39,17 @@ namespace TabletopArmyCreator
                     services.AddScoped<ITroopTabViewModel, TroopTabViewModel>();
                     services.AddScoped<TroopTabView>();
 
-                    services.AddScoped<UserSettingsDialogView2>();
-                    
+
+
                     services.AddScoped<MahApps.Metro.SimpleChildWindow.ChildWindow>();
-                    services.AddScoped<DialogViewShell>();
-
-                    services.AddScoped<UserSettingsDialogViewModel>();
-                    services.AddScoped<UserSettingsDialogView2>();
-
+                    services.AddTransient<DialogViewShell>();
                     services.AddScoped<MessageDialogViewModel>();
                     services.AddScoped<MessageDialogView>();
+
+
+                    services.AddScoped<IUserSettingsDialogViewModel, UserSettingsDialogViewModel>();
+                    services.AddTransient<UserSettingsDialogView2>();
+
                 })
                 .Build();
         }

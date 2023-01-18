@@ -26,7 +26,6 @@
                         <Setter Property="Command" Value="{Binding MoveTabCommand}"/>
                         <Setter Property="MinHeight" Value="10"/>
                         <Setter Property="MinWidth" Value="35"/>
-
                         <Setter Property="Margin" Value="1"/>
                         <Setter Property="Cursor" Value="Hand"/>
                         <Setter Property="Template">
@@ -42,8 +41,6 @@
                                         <ContentPresenter Margin="{TemplateBinding Margin}" HorizontalAlignment="Center" VerticalAlignment="Center" >
 
                                         </ContentPresenter>
-
-
                                     </Grid>
                                 </ControlTemplate>
                             </Setter.Value>
@@ -56,15 +53,19 @@
                 <Button Content="Troops"
                         CommandParameter="{x:Static enums:UnitType.Troop}"/>
             </WrapPanel>
-            <Button DockPanel.Dock="Right">
+            <Button DockPanel.Dock="Right"
+                    Cursor="Hand">
                 <Button.Command>
                     <commands:OpenUserSettingsDialog />
                 </Button.Command>
+                <Button.CommandParameter>
+                    <Binding Path="UserId"/>
+                </Button.CommandParameter>
                 <Grid Height="15">
                     <fontAwesome:PackIconFontAwesome  Kind="CogSolid"
                                                       Spin="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}, Path=IsMouseOver}"/>
-                    <Image Source="Icons/Mozrog.JPG"
-                           Margin="8,0,0,0"/>
+                    <!--<Image Source="Icons/Mozrog.JPG"
+                           Margin="8,0,0,0"/>-->
                 </Grid>
             </Button>
         </DockPanel>
@@ -77,12 +78,9 @@
                 <DataTemplate DataType="{x:Type tabViewModels:TroopTabViewModel}">
                     <views:TroopTabView/>
                 </DataTemplate>
-
             </Grid.Resources>
 
             <ContentControl Content="{Binding SelectedTab}"/>
-
         </Grid>
-
     </DockPanel>
 </Controls:MetroWindow>

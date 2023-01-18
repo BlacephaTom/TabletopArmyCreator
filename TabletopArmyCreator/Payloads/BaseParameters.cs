@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TabletopArmyCreator.Commands
+namespace TabletopArmyCreator.Payloads
 {
-    public class BaseNavigationClass
+    public abstract class BaseParameters
     {
-
-
-
-
-
 
     }
 }
