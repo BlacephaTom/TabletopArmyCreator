@@ -15,6 +15,7 @@ using TabletopArmyCreator.Interfaces.TabInterfaces;
 using TabletopArmyCreator.ViewModels.TabViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using TabletopArmyCreator.Factories;
+using TabletopArmyCreator.ViewModels.Dialogs;
 
 namespace TabletopArmyCreator.ViewModels
 {
@@ -23,8 +24,11 @@ namespace TabletopArmyCreator.ViewModels
         public MainWindowViewModel()
         {
             this.MoveTabCommand = new DelegateCommand<object>(this.MoveTab);
+            this.UserId = 5;
         }
     
+        public int UserId { get; set; }
+
         /// <summary>
         /// Switch tab
         /// </summary>
@@ -102,14 +106,13 @@ namespace TabletopArmyCreator.ViewModels
             {
                 //Tab will always be null
                 case UnitType.Hq:
-                    this.SelectedTab = this.HqTabViewModel ?? App.AppHost.Services.GetRequiredService<IHqTabViewModel>();
+                    this.SelectedTab = this.HqTabViewModel ?? App.AppHost.Services.GetRequiredService<HqTabView>();
                     break;
                 case UnitType.Troop:
-                    this.SelectedTab = this.TroopTabViewModel ?? App.AppHost.Services.GetRequiredService<ITroopTabViewModel>();
+                    this.SelectedTab = this.TroopTabViewModel ?? App.AppHost.Services.GetRequiredService<TroopTabView>();
                     break;
             }
 
         }
-
     }
 }

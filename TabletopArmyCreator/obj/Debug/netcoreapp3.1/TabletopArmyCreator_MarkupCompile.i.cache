@@ -10,11 +10,11 @@ none
 false
 Debug;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\tomgo\VisualStudioProjects\GitHubRepos\TabletopArmyCreator\TabletopArmyCreator\App.xaml
-535663214
+8641517392
 
-231185592258
-2251899715579
-Converters\Converters.xaml;MainWindow.xaml;Resources\ButtonStyles.xaml;Views\HqTabView.xaml;Views\TroopTabView.xaml;
+44926084834
+257-1119540329
+Converters\Converters.xaml;MainWindow.xaml;Resources\ButtonStyles.xaml;Views\Dialogs\DialogViewShell.xaml;Views\Dialogs\MessageDialogView.xaml;Views\Dialogs\UserSettingsDialogView2.xaml;Views\HqTabView.xaml;Views\TroopTabView.xaml;
 
 False
 
