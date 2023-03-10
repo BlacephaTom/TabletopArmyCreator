@@ -11,6 +11,7 @@ using TabletopArmyCreator.Views;
 using TabletopArmyCreator.Views.Dialogs;
 using TabletopArmyCreator.Interfaces.Dialogs;
 using TabletopArmyCreator.ViewModels.Dialogs;
+using TabletopArmyCreator.DatabaseRequests;
 
 //Transient objects are always different; a new instance is provided to every controller and every service.
 
@@ -50,6 +51,7 @@ namespace TabletopArmyCreator
                     services.AddScoped<IUserSettingsDialogViewModel, UserSettingsDialogViewModel>();
                     services.AddTransient<UserSettingsDialogView2>();
 
+                    services.AddTransient<ISqlDatasbaseInterractionService, SqlDatasbaseInterractionService>();
                 })
                 .Build();
         }
