@@ -21,7 +21,7 @@ namespace TabletopArmyCreator.Commands.DialogCommands
 
         public async void Execute(object param)
         {
-            var dialogView = App.AppHost.Services.GetDialogViewWithDataContext<UserSettingsDialogView2, IUserSettingsDialogViewModel>(new UserSettingsDialogParameters(7));
+            var dialogView = App.AppHost.Services.GetDialogViewWithDataContext<UserSettingsDialogView2, IUserSettingsDialogViewModel>(new UserSettingsDialogParameters(1));
 
             await this.OpenConfirmCancelDialogAsync(dialogView, "User Settings");
         }

@@ -2,18 +2,20 @@
 
 using TabletopArmyCreator.Payloads;
 using TabletopArmyCreator.Interfaces.Dialogs;
-using TabletopArmyCreator.Interfaces.FactoryInterfaces;
 
 using Prism.Commands;
 
 using TabletopArmyCreator.PropertyChangedImplementation;
 using TabletopArmyCreator.DatabaseRequests.Requests;
 
+using TabletopArmyCreator.DatabaseRequests;
+
+
 namespace TabletopArmyCreator.ViewModels.Dialogs
 {
     public class UserSettingsDialogViewModel : NotifyPropertyChangedEvents, IUserSettingsDialogViewModel
     {
-        public UserSettingsDialogViewModel()
+        public UserSettingsDialogViewModel(ISqlDatasbaseInterractionService sqlService)
         {
             this.CancelCommand = new DelegateCommand(this.CancelImplementation);
             this.ConfirmationCommand = new DelegateCommand(this.ConfirmationImplementation);
@@ -28,8 +30,15 @@ namespace TabletopArmyCreator.ViewModels.Dialogs
                     this.GetUserDetails();
                 });
 
+            this.SqlService = sqlService;
             
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ISqlDatasbaseInterractionService SqlService;
+
 
         private async void GetUserDetails()
         {
@@ -38,9 +47,10 @@ namespace TabletopArmyCreator.ViewModels.Dialogs
 
             var request = new GetUserDetailsRequest(this.UserId);
 
-            DatabaseRequests.SqlDatasbaseInterractionService
-                .SendRequestAsync(request, string.Empty);
-
+            var result = await SqlService
+                .SendRequestAsync(
+                        request,
+                        SqlService.GetSqlConnection());
         }
 
         public void CancelImplementation()

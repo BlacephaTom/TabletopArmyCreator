@@ -11,9 +11,7 @@ namespace TabletopArmyCreator.DatabaseRequests.Requests
             this.UserId = userId;
         }
 
-        [StoredProcedureParameter("@UserId", SqlDbType.BigInt)]
+        [StoredProcedureParameter("UserId", SqlDbType.BigInt)]
         public long UserId { get; set; }
-
-        public long NotUserId { get; set; }
     }
 }
